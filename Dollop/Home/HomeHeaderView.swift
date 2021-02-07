@@ -28,7 +28,7 @@ extension HomeHeaderView {
         greeting.numberOfLines = 0
         greeting.lineBreakMode = .byWordWrapping
         
-        makeInboxButton()   
+        makeInboxButton()
         
     }
     
@@ -44,7 +44,8 @@ extension HomeHeaderView {
             
             inboxButton.topAnchor.constraint(equalToSystemSpacingBelow: greeting.bottomAnchor, multiplier: 2), /// 16pts (2x8)
             inboxButton.leadingAnchor.constraint(equalToSystemSpacingAfter: leadingAnchor, multiplier: 2),
-            bottomAnchor.constraint(equalToSystemSpacingBelow: inboxButton.bottomAnchor, multiplier: 1)
+            bottomAnchor.constraint(equalToSystemSpacingBelow: inboxButton.bottomAnchor, multiplier: 1),
+            inboxButton.widthAnchor.constraint(equalTo: widthAnchor, multiplier: 0.25)
             
             
         ])

@@ -88,6 +88,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         tabBarController.viewControllers = [homeVC, scanNC, orderNC, giftNC, storeNC]
         
         window?.rootViewController = tabBarController
+        tabBarController.tabBar.tintColor = .lightGreen
+        tabBarController.tabBar.isTranslucent = false
+        
         return true
     }
 }
