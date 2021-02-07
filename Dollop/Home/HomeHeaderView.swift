@@ -28,9 +28,7 @@ extension HomeHeaderView {
         greeting.numberOfLines = 0
         greeting.lineBreakMode = .byWordWrapping
         
-        inboxButton.translatesAutoresizingMaskIntoConstraints = false
-        inboxButton.setTitleColor(.label, for: .normal)
-        inboxButton.setTitle("Inbox", for: .normal)
+        makeInboxButton()   
         
     }
     
@@ -54,4 +52,23 @@ extension HomeHeaderView {
     }
 }
 
+// MARK: Factories
 
+extension HomeHeaderView {
+    func makeInboxButton(){
+        inboxButton.translatesAutoresizingMaskIntoConstraints = false
+        let configuration = UIImage.SymbolConfiguration(scale: .large)
+        let image = UIImage(systemName: "envelope", withConfiguration: configuration)
+        
+        inboxButton.setImage(image, for: .normal)
+        inboxButton.imageView?.tintColor = .secondaryLabel
+        inboxButton.imageView?.contentMode = .scaleAspectFit
+        
+        inboxButton.setTitle("Inbox", for: .normal)
+        inboxButton.setTitleColor(.secondaryLabel, for: .normal)
+        
+        inboxButton.imageEdgeInsets = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 16)
+        inboxButton.contentEdgeInsets = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
+        
+    }
+}

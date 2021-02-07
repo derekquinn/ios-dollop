@@ -49,7 +49,7 @@ extension HomeViewController {
         headerViewTopConstraint = headerView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor)
         
         NSLayoutConstraint.activate([
-           // headerView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
+            // headerView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
             headerViewTopConstraint!,
             headerView.leadingAnchor.constraint(equalTo: view.leadingAnchor),/// completely flush to parent
             headerView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
@@ -69,7 +69,7 @@ extension HomeViewController: UITableViewDataSource{
     func setupTableView(){
         tableView.dataSource = self
         tableView.delegate = self
-
+        
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: cellId)
         tableView.tableFooterView = UIView()
     }
@@ -86,7 +86,7 @@ extension HomeViewController: UITableViewDataSource{
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-     
+        
         return tiles.count
     }
 }
